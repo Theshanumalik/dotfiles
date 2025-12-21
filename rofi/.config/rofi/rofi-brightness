@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [ -z "$@" ]; then
+    echo -e " Increase\n Decrease\n󰃞 Set to 20%\n󰃟 Set to 50%\n󰃠 Set to 80%"
+else
+    case "$1" in
+        " Increase") brightnessctl set +10% ;;
+        " Decrease") brightnessctl set 10%- ;;
+        "󰃞 Set to 20%") brightnessctl set 20% ;;
+        "󰃟 Set to 50%") brightnessctl set 50% ;;
+        "󰃠 Set to 80%") brightnessctl set 80% ;;
+    esac
+fi
