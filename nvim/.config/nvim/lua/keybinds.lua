@@ -16,3 +16,6 @@ map("n", "<leader>]", "<CMD>bn<CR>")
 -- leader-o/O inserts blank line below/above
 map("n", "<leader>o", "o<ESC>")
 map("n", "<leader>O", "O<ESC>")
+
+-- leader-e to diagnose the error
+map("n", "<leader>e", vim.diagnostic.open_float)

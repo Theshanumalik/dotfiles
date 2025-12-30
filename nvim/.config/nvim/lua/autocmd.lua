@@ -23,12 +23,7 @@ local num_au = A.nvim_create_augroup("NUMTOSTR", { clear = true })
 A.nvim_create_autocmd("TextYankPost", {
 	group = num_au,
 	callback = function()
-		vim.highlight.on_yank({ higroup = "Visual" })
-		-- This is a workaround for clipboard not working in WSL
-		-- see https://github.com/neovim/neovim/issues/19204#issuecomment-1173722375
-		-- if vim.fn.has('wsl') == 1 then
-		--     vim.fn.system('clip.exe', vim.fn.getreg('"'))
-		-- end
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
 	end,
 })
 
