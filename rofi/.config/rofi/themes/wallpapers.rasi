@@ -1,0 +1,95 @@
+@import "~/.cache/wal/colors.rasi"
+
+configuration {
+    // show-icons:                 false;
+}
+
+* {
+    width: 600;
+    font: "MesloLGS Nerd Font Mono 10";
+    color: @foreground;
+}
+
+window {
+    height: 360px;
+    border: 1px;
+    border-color: @foreground;
+    background-color: @background;
+    border-radius: 5px;
+}
+
+mainbox {
+    background-color: @background;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    enabled: true;
+    enter: false;
+    padding: 10px;
+    margin: 10px 0px 0px 10px;
+}
+
+prompt {
+    background-color: @selected-normal-background;
+    border-radius: 5px;
+    padding: 6px 13px 6px 9px;
+}
+
+entry {
+    enabled: false;
+    expand: false;
+}
+
+listview {
+    padding: 10px;
+    margin: 10px 0px 0px 10px;
+    columns: 3;
+    // lines: 1;
+    background-color: @background;
+    // orientation: horizontal;
+}
+
+element {
+    padding: 3px;
+    text-color: @foreground;
+    border-radius: 8px;
+    border: 1px;
+    children: [element-icon];
+    orientation: vertical;
+}
+element-text {
+    enabled: false;
+}
+element-icon {
+    size: calc((100% - 7em)/6);
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element selected {
+  border-color: @foreground;
+}
+
+mode-switcher {
+    spacing: 0;
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+button {
+    padding: 10px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+message {
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    // text-color: @blue;
+}

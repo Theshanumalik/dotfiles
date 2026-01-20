@@ -17,9 +17,9 @@
     "tray",
     "bluetooth",
     "network",
-    "custom/notification",
     "pulseaudio", 
     "backlight",
+    "custom/notification",
     "battery",
     "clock",
     "custom/lock"
@@ -60,7 +60,7 @@
   "clock": {
     "timezone": "Asia/Kolkata",
     "tooltip": false,
-    "format": "{:%H:%M %p -  %b, %d}",
+    "format": "{:%I:%M %p -  %b, %d}",
   },
 
   "network": {
@@ -111,64 +111,44 @@
   },
 
   "battery": {
-        "interval":2,
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""],
-        "adapter": "ADP0",
-        "bat": "BAT0"
+    "interval":2,
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""],
+    "adapter": "ADP0",
+    "bat": "BAT0"
   },
   
   "custom/lock": {
-  "tooltip": false,
-  "on-click": "wlogout",
-  "format" : "󰐥"
+    "tooltip": false,
+    "on-click": "$HOME/scripts/power-menu.sh",
+    "format" : "󰐥"
   },
-   // "custom/notification": {
-   //    "tooltip": false,
-   //    "format": "{icon}",
-   //    "format-icons": {
-   //      "notification": "<span foreground='red'><sup></sup></span>",
-   //      "none": "",
-   //      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-   //      "dnd-none": "",
-   //      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-   //      "inhibited-none": "",
-   //      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-   //      "dnd-inhibited-none": ""
-   //    },
-   //    "return-type": "json",
-   //    "exec-if": "which swaync-client",
-   //    "exec": "swaync-client -swb",
-   //    "on-click": "swaync-client -t -sw",
-   //    "on-click-right": "swaync-client -d -sw",
-   //    "escape": true
-   //  },
-    "custom/notification": {
-            "tooltip": false,
-            "format": "{icon} {}",
-            "format-icons": {
-                "notification": "<span foreground='red'><sup></sup></span>",
-                "none": "",
-                "dnd-notification": "<span foreground='red'><sup></sup></span>",
-                "dnd-none": "",
-                "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-                "inhibited-none": "",
-                "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-                "dnd-inhibited-none": ""
-            },
-            "return-type": "json",
-            "exec-if": "which swaync-client",
-            "exec": "swaync-client -swb",
-            "on-click": "swaync-client -t -sw",
-            "escape": true
-        }
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
+  }
 }

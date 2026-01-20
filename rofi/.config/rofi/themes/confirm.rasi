@@ -1,0 +1,184 @@
+configuration {
+    show-icons:                 false;
+}
+
+@import                          "~/.cache/wal/colors.rasi"
+
+// * {
+//     active-background: #80695a;
+//     active-foreground: @foreground;
+//     normal-background: @background;
+//     normal-foreground: @foreground;
+//     urgent-background: #7b423a;
+//     urgent-foreground: @foreground;
+//
+//     alternate-active-background: @background;
+//     alternate-active-foreground: @foreground;
+//     alternate-normal-background: @background;
+//     alternate-normal-foreground: @foreground;
+//     alternate-urgent-background: @background;
+//     alternate-urgent-foreground: @foreground;
+//
+//     selected-active-background: #7b423a;
+//     selected-active-foreground: @foreground;
+//     selected-normal-background: #80695a;
+//     selected-normal-foreground: @foreground;
+//     selected-urgent-background: #425b63;
+//     selected-urgent-foreground: @foreground;
+//
+//     background-color: @background;
+//     background: #121e2a;
+//     foreground: #c3c6c9;
+//     border-color: @background;
+//     spacing: 2;
+// }
+* {
+    font: "NotoSans Nerd Font 10";
+}
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    north;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       420px;
+    y-offset:                    20px;
+    // height:                      250px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @selected-active-background;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     30px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected-active-background;
+    background-color:            transparent;
+    children:                    [  "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                @selected-active-background;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    ["prompt"];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     12px 16px;
+    border-radius:               8px;
+    background-color:            @active-background;
+    text-color:                  @foreground;
+}
+prompt {
+    enabled:                     true;
+    padding:                     12px;
+    border-radius:               8px;
+    background-color:            @urgent-background;
+    text-color:                  @foreground;
+    width:                       100%;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     12px 0;
+    border:                      0px solid;
+    border-radius:               0px;
+    // background-color:            @active-background;
+    text-color:                  @foreground;
+    horizontal-align:            1;
+    layout: horizontal;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0;
+    placeholder-color:           @foreground;
+    blink:                       true;
+    markup:                      true;
+}
+error-message {
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected-active-background;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      horizontal;
+    reverse:                     true;
+    columns: 2;
+    lines: 2;
+    
+    spacing:                     8px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     10px 10px;
+    border:                      0px solid;
+    border-radius:               8px;
+    background-color:            @alternate-urgent-background;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element-icon {
+    size:                        25px;
+}
+element selected.normal {
+    background-color:            @selected-active-background;
+    text-color:                  @background;
+}
