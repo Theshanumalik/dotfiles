@@ -12,7 +12,6 @@ configuration{
     display-window: " 🪟  Window";
     sidebar-mode: true;
     display-drun: " ";
-    animation: "layersIn, 1, 8, default, popin 80%";
 }
 
-@theme "catppuccin-mocha"
+@theme "base-theme"

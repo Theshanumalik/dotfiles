@@ -5,14 +5,12 @@ configuration {
 @import                          "~/.cache/wal/colors.rasi"
 
 * {
-    font: "NotoSans Nerd Font 10";
+    font: "CaskaydiaCove Nerd Font 10";
 }
 
 window {
     /* properties for window widget */
     transparency:                "real";
-    // location:                    north east;
-    // anchor:                      center;
     location:                    north;
     anchor:                      center;
     y-offset:                    20px;

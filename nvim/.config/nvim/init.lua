@@ -5,3 +5,5 @@ require("settings")
 require("plugins")
 require("keybinds")
 require("autocmd")
+
+vim.cmd.colorscheme("pywal")

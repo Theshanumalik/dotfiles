@@ -1,7 +1,7 @@
 #!/bin/bash
 
 wall_dir="$HOME/Pictures/wallpapers"
-change_wallpaper_script="$HOME/.config/hypr/scripts/setwall.sh"
+change_wallpaper_script="$HOME/scripts/set-wal.sh"
 theme="$HOME/.config/rofi/themes/wallpapers.rasi"
 
 selected=$(ls "$wall_dir"/* | while read imageFile; do

@@ -27,16 +27,20 @@ require("lazy").setup({
 		config = function()
 			require("catppuccin").setup({
 				flavour = "frappe",
-				transparent_background = true,
+				transparent_background = false,
 				-- integrations = {
 				-- 	cmp = false,
 				-- 	mason = false,
 				-- 	telescope = true,
 				-- },
 			})
-
-			vim.cmd.colorscheme("catppuccin")
 		end,
+	},
+	{
+		"AlphaTechnolog/pywal.nvim",
+		name = "pywal",
+		lazy = false,
+		priority = 1000, -- colorscheme sabse pehle load ho
 	},
 	-- { "folke/tokyonight.nvim" },
 	-- { "morhetz/gruvbox" },
@@ -151,7 +155,15 @@ require("lazy").setup({
 
 	{
 		"mason-org/mason-lspconfig.nvim",
-		opts = {},
+		opts = {
+			ensure_installed = {
+				"html",
+				"cssls",
+				"jsonls",
+				"eslint",
+				"tailwindcss",
+			},
+		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",

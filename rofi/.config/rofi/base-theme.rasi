@@ -11,7 +11,7 @@
     grey:                  @alternate-normal-foreground;
 
     width: 600;
-    font: "MesloLGS Nerd Font Mono 10";
+    font: "CaskaydiaCove Nerd Font 10";
 }
 
 element-text, element-icon, mode-switcher {

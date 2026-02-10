@@ -52,11 +52,18 @@ A.nvim_create_autocmd("BufReadPost", {
 })
 
 -- Auto format on save
-vim.api.nvim_create_autocmd("BufWritePre", {
+A.nvim_create_autocmd("BufWritePre", {
 	group = vim.api.nvim_create_augroup("LspFormatting", { clear = true }),
 	callback = function(args)
 		if vim.lsp.buf_is_attached(args.buf) then
 			vim.lsp.buf.format({ bufnr = args.buf, async = false })
 		end
+	end,
+})
+
+A.nvim_create_autocmd("Signal", {
+	pattern = "SIGUSR1",
+	callback = function()
+		require("pywal").reload()
 	end,
 })

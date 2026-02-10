@@ -6,7 +6,7 @@ configuration {
 
 * {
     width: 600;
-    font: "MesloLGS Nerd Font Mono 10";
+    font: "CaskaydiaCove Nerd Font 10";
     color: @foreground;
 }
 

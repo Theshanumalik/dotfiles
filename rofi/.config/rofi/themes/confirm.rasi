@@ -33,7 +33,7 @@ configuration {
 //     spacing: 2;
 // }
 * {
-    font: "NotoSans Nerd Font 10";
+    font: "CaskaydiaCove Nerd Font 10";
 }
 window {
     /* properties for window widget */
