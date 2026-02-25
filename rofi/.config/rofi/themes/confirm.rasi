@@ -4,37 +4,10 @@ configuration {
 
 @import                          "~/.cache/wal/colors.rasi"
 
-// * {
-//     active-background: #80695a;
-//     active-foreground: @foreground;
-//     normal-background: @background;
-//     normal-foreground: @foreground;
-//     urgent-background: #7b423a;
-//     urgent-foreground: @foreground;
-//
-//     alternate-active-background: @background;
-//     alternate-active-foreground: @foreground;
-//     alternate-normal-background: @background;
-//     alternate-normal-foreground: @foreground;
-//     alternate-urgent-background: @background;
-//     alternate-urgent-foreground: @foreground;
-//
-//     selected-active-background: #7b423a;
-//     selected-active-foreground: @foreground;
-//     selected-normal-background: #80695a;
-//     selected-normal-foreground: @foreground;
-//     selected-urgent-background: #425b63;
-//     selected-urgent-foreground: @foreground;
-//
-//     background-color: @background;
-//     background: #121e2a;
-//     foreground: #c3c6c9;
-//     border-color: @background;
-//     spacing: 2;
-// }
 * {
     font: "CaskaydiaCove Nerd Font 10";
 }
+
 window {
     /* properties for window widget */
     transparency:                "real";

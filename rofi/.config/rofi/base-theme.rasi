@@ -22,9 +22,9 @@ element-text, element-icon, mode-switcher {
 window {
     height: 360px;
     border: 1px;
-    border-color: @foreground;
+    border-color: @selected-normal-background;
     background-color: @bg-col;
-    border-radius: 5px;
+    border-radius: 9px;
 }
 
 mainbox {
@@ -61,7 +61,7 @@ entry {
 listview {
     border: 0px 0px 0px;
     padding: 9px 9px 9px;
-    margin: 10px 0px 0px 20px;
+    margin: 0px 10px 0px 10px;
     columns: 2;
     lines: 5;
     background-color: @bg-col;

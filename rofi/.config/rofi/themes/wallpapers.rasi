@@ -1,9 +1,5 @@
 @import "~/.cache/wal/colors.rasi"
 
-configuration {
-    // show-icons:                 false;
-}
-
 * {
     width: 600;
     font: "CaskaydiaCove Nerd Font 10";
@@ -13,7 +9,7 @@ configuration {
 window {
     height: 360px;
     border: 1px;
-    border-color: @foreground;
+    border-color: @selected-normal-background;
     background-color: @background;
     border-radius: 5px;
 }
@@ -43,11 +39,9 @@ entry {
 
 listview {
     padding: 10px;
-    margin: 10px 0px 0px 10px;
+    margin: 0px 10px 0px 10px;
     columns: 3;
-    // lines: 1;
     background-color: @background;
-    // orientation: horizontal;
 }
 
 element {
